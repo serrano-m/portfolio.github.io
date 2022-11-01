@@ -1,0 +1,123 @@
+.img__face{
+   width: 50%;
+   left: 20%;
+   top: 2vh;
+   z-index: -1;
+   position: absolute;
+}
+
+.img_bg{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+}
+
+.img__projects{
+    width: 100%;
+    height: auto;
+    transition: 1.5s;
+    display: block;
+}
+
+.img__portfolio{
+    width: 100%;
+    height: auto;
+    margin-bottom: $gridgutter;
+    margin-top: $gridgutter;
+}   
+
+.img__sardinha{
+    width: 4%;
+    position: absolute;
+    top: 35vh;
+    right: 10vh;
+}
+
+.img__guarana{
+    width: 20%;
+    position: absolute;
+    top: 55vh;
+    left: -13vh;
+}
+
+.img__container-contacts{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img__face-contact{
+    width: 90%;
+}
+
+.img__aviao-contacts{
+    width: 90%;
+    position: absolute;
+    top: 60vh;
+    left: -20vh;
+}
+
+video{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+@media (max-width: 1400px){
+    .img__sardinha{
+        width: 8%;
+        position: absolute;
+        top: 65vh;
+        right: 10vh;
+    }
+
+    .img__guarana{
+        width: 35%;
+        position: absolute;
+        top: 85vh;
+        left: -20vh;
+    }
+}
+
+@media (max-width: 1200px){
+    .img__sardinha{
+        width: 8%;
+        position: absolute;
+        top: 65vh;
+        right: 10vh;
+    }
+
+    .img__guarana{
+        width: 35%;
+        position: absolute;
+        top: 85vh;
+        left: -20vh;
+    }
+
+    
+}
+
+@media (max-width: 1000px){
+    .img__sardinha{
+        display: none;
+    }
+
+    .img__guarana{
+       display: none;
+    }
+
+    .img__face-contact{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .img__aviao-contacts{
+        width: 90%;
+        position: absolute;
+        top: 75vh;
+        left: 2vh;
+    }
+    
+}

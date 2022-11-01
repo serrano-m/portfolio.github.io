@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html{
+    font-family: $bodyfontfamily, sans-serif;
+    color: $black;
+    background-color: $background;
+    font-weight: 300;
+    line-height: 1.618; // the golden ratio, baby!
+    // Setting base font-size for different breakpoints to then use REM everywhere:
+    font-size: $basefontsizemobile;
+    @media(min-width: $tablet){
+      font-size: $basefontsizetablet;
+    }
+    @media(min-width: $desktop){
+      font-size: $basefontsizedesktop;
+    }
+}
+
+/* ==================== */
+/* ======= TEXT ======= */
+/* ==================== */
+.flexcenter{
+  display: flex;
+  justify-content: center;
+}
+
+.margintop{
+  margin-top: 40px;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+
+.textright{
+  text-align: right;
+}
+
+.textleft{
+  text-align: left;
+}
+
+.textcenter{
+  text-align: center;
+}
+
+.text__home-left{
+  /*position: relative;
+  left: -16vh;
+  top: 86vh;*/
+  font-size: 24px;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-start;
+  }
+.text__skils{
+  display: flex;
+  justify-content: space-between;
+}
+.text__home-right{
+  /*position: relative;
+  right: -16vh;
+  top: 86vh;*/
+  font-size: 24px;
+  font-weight: 300;
+  z-index: -1; 
+}
+  
+.principle__title{
+  margin-top: 20vh;
+  h5{
+    font-weight: 600;
+    font-size: 16px;
+  }
+  h1{
+    margin: 0;
+    font-weight: 400;
+    font-size: 109px;
+    line-height: 129px; 
+    letter-spacing: 7px;
+  }
+}
+
+.principle__subtitle{
+  margin: 0;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  margin-top: 5vh;
+}
+
+.second__subtitle{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 15px;
+  a{
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.curriculum__vitae{
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 5vh;
+}
+
+.menu__work{
+  font-weight: 600;
+  font-size: 16px; 
+}
+
+@media (max-width: 1200px){  
+  .paragraph__about{
+    margin: 0;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 31px;
+    margin-top: 5vh;
+  }
+  
+  .curriculum__vitae{
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 5vh;
+    margin-left: 9vh;
+  }
+}
+
+@media (max-width: 900px){
+  .principle__title{
+    h5{
+      font-weight: 600;
+      font-size: 13px;
+    }
+    h1{
+      margin: 0;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 46px;
+    }
+  }
+
+}

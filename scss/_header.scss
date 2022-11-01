@@ -1,0 +1,355 @@
+header{
+    width: 100%;
+    height: 125px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 3000;
+    a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $black;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    .menu__desktop{
+        display: flex;
+        justify-content: end;
+        list-style: none;
+        gap: $gridgutter;
+        padding-right: 6vh;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 24px;
+        /*padding-left: $gridgutter *2;*/
+      }
+
+    .textright{
+        position: relative;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        label{
+            height: 22px;
+            align-items: center;
+            display: flex;
+            cursor: pointer;
+        }
+
+        .hamburguercheck{
+            position: relative;
+            display: none;
+        }
+
+        .hamburguercheck div{
+            width: 32px;
+            height: 2px;
+            display: none;
+            background: $black;
+            transition: .7s;
+        }
+
+        .hamburguercheck::before{
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 2px;
+            display: none;
+            background: $black;
+            top: -10px;
+            transition: .7s;
+        }
+        .hamburguercheck::after{
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 2px;
+            display: none;
+            background: $black;
+            top: 10px;
+            transition: .7s;
+        }
+    }
+}
+
+
+nav {
+    position: absolute;
+    top: -100vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    transition: .7s;
+    z-index: 2999;
+    background: $graydark;
+    ul{
+        list-style: none;
+    }
+    li{
+        padding-top: 40px;
+    }
+    a{
+        text-decoration: none;
+        color: $black;
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0;
+        &.active{
+            color: $graydark;
+        }
+    }  
+}
+
+#hamburguercheck{
+    display: none;
+    &:checked{ 
+        & ~ nav{
+        top: 0;
+        }
+        & ~ header{
+            label{
+                & > div{
+                    & div{
+                        opacity: 0;
+                    }
+                    &::before{
+                        top:0;
+                        transform: rotate(45deg);
+                    }
+                    &::after{
+                        top:0;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    header{
+        width: 100%;
+        height: 125px;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        z-index: 3000;
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $black;
+            font-size: 24px;
+            font-weight: 300;
+        }
+    
+        .menu__desktop{
+            display: none;
+        }
+        
+        .logo{
+            display: flex;
+            justify-content: flex-start;
+            font-weight: 300;
+            font-size: 24px;
+            /*padding-left: $gridgutter *2;*/
+          }
+
+        .menu__responsive{
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .textright{
+            position: relative;
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            label{
+                height: 22px;
+                align-items: center;
+                display: flex;
+                cursor: pointer;
+            }
+    
+            .hamburguercheck{
+                position: relative;
+                display: block;
+            }
+    
+            .hamburguercheck div{
+                width: 32px;
+                height: 2px;
+                display: block;
+                background: $black;
+                transition: .7s;
+            }
+    
+            .hamburguercheck::before{
+                content: '';
+                position: absolute;
+                width: 32px;
+                height: 2px;
+                display: block;
+                background: $black;
+                top: -10px;
+                transition: .7s;
+            }
+            .hamburguercheck::after{
+                content: '';
+                position: absolute;
+                width: 32px;
+                height: 2px;
+                display: block;
+                background: $black;
+                top: 10px;
+                transition: .7s;
+            }
+        }
+    }
+    
+    nav {
+        position: absolute;
+        top: -100vh;
+        width: 100%;
+        height: 100vh;
+        transition: .7s;
+        z-index: 2999;
+        background: $background;
+        text-align: center;
+        ul{
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            padding-top: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: $black;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+            &.active{
+                color: $graydark;
+            }
+        }  
+    }
+    
+    #hamburguercheck{
+        display: none;
+        &:checked{ 
+            & ~ nav{
+            top: 0;
+            }
+            & ~ header{
+                label{
+                    & > div{
+                        & div{
+                            opacity: 0;
+                        }
+                        &::before{
+                            top:0;
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            top:0;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 3000;
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $black;
+            font-size: 24px;
+            font-weight: 300;
+        }
+    
+        .menu__desktop{
+            display: none;
+        }
+        
+        .logo{
+            display: flex;
+            justify-content: flex-start;
+            font-weight: 300;
+            font-size: 21px;
+            /*padding-left: $gridgutter *2;*/
+          }
+
+        .menu__responsive{
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .textright{
+            position: relative;
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            label{
+                height: 22px;
+                align-items: center;
+                display: flex;
+                cursor: pointer;
+            }
+    
+            .hamburguercheck{
+                position: relative;
+                display: block;
+            }
+    
+            .hamburguercheck div{
+                width: 32px;
+                height: 2px;
+                display: block;
+                background: $black;
+                transition: .7s;
+            }
+    
+            .hamburguercheck::before{
+                content: '';
+                position: absolute;
+                width: 32px;
+                height: 2px;
+                display: block;
+                background: $black;
+                top: -10px;
+                transition: .7s;
+            }
+            .hamburguercheck::after{
+                content: '';
+                position: absolute;
+                width: 32px;
+                height: 2px;
+                display: block;
+                background: $black;
+                top: 10px;
+                transition: .7s;
+            }
+        }
+    }
+}
